@@ -17,14 +17,12 @@ body {
   margin: 70px auto 0;
   overflow: hidden;
   grid-area: slider;
+  border-radius: 30px;
 }
 .slider {
   display: flex;
   width: 400%;
   height: 600px;
-  border-radius: 30px;
-
-  /* padding-top: 40px; */
 }
 .input {
   visibility: hidden;
@@ -102,4 +100,34 @@ body {
 #input4:checked ~ .slider__navigation > .bar > .bar__circle4 {
   background-color: #71abfe;
   background-color: inherit;
+}
+
+.slider__descr {
+  overflow: hidden;
+  width: 230px;
+}
+.slider__descr-wrapper {
+  font-size: 30px;
+  color: white;
+  display: flex;
+  flex-wrap: nowrap;
+  width: 920px;
+  transition: 0.6s;
+}
+.descr__item {
+  margin-right: 30px;
+  width: 25%;
+}
+
+#input1:checked ~ .slider__descr > .slider__descr-wrapper {
+  transform: translateX(0%);
+}
+#input2:checked ~ .slider__descr > .slider__descr-wrapper {
+  transform: translateX(-25%);
+}
+#input3:checked ~ .slider__descr > .slider__descr-wrapper {
+  transform: translateX(-50%);
+}
+#input4:checked ~ .slider__descr > .slider__descr-wrapper {
+  transform: translateX(-75%);
 }
