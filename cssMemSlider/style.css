@@ -3,12 +3,12 @@ body {
 }
 .wrapper {
   display: grid;
-  max-width: 1160px;
+  max-width: 72.5rem;
   margin: 0 auto;
   padding: 0 1.3rem;
   grid-template-areas:
-    'slider slider'
-    'descr nav';
+    'slider slider slider'
+    'descr descr nav';
   grid-row-gap: 2rem;
   background-color: #25282a;
 }
@@ -130,6 +130,10 @@ body {
 @media (max-width: 768px) {
   .wrapper {
     margin: 20% auto 0;
+    grid-template-areas:
+      'slider slider'
+      'nav nav'
+      'descr descr';
   }
   .slider__navigation {
     justify-content: center;
@@ -178,7 +182,7 @@ body {
 
 @media (max-width: 350px) {
   .wrapper {
-    margin: 20% auto 0;
+    margin: 30% auto 0;
     padding: 0 0.5rem;
   }
   .slider__navigation {
@@ -196,6 +200,6 @@ body {
     height: 0.5rem;
   }
   .slider__descr-wrapper {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 }
